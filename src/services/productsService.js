@@ -11,13 +11,13 @@ export function insertProduct(data) {
   // data['id'] = generateProductId()
   // products.push(data)
   // localStorage.setItem(KEYS.products,JSON.stringify(products))
-  axios.post("http://localhost:8080/api/v1/products", data);
+  axios.post("https://inventoryspring.herokuapp.com/api/v1/products", data);
   console.log(data);
   console.log("Insert Product Running");
 }
 export function editProduct(data) {
   axios
-    .put("http://localhost:8080/api/v1/products/" + data.id, qs.stringify(data))
+    .put("https://inventoryspring.herokuapp.com/api/v1/products/" + data.id, qs.stringify(data))
     .catch((err) => {
       console.log(err);
     });

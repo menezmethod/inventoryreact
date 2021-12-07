@@ -116,7 +116,7 @@ export default function Products(...props) {
 
   const handleDeleteProduct = (clickedProduct) => {
     console.log("Deleting: " + selectionModelProducts);
-    axios.delete("http://localhost:8080/api/v1/products/" + first);
+    axios.delete("https://inventoryspring.herokuapp.com/api/v1/products/" + first);
     //setProducts((r) => r.filter((x) => !selectedIDs.has(x.id)));
   };
 
@@ -124,7 +124,7 @@ export default function Products(...props) {
     const fetchValues = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/products/" + first
+          "https://inventoryspring.herokuapp.com/api/v1/products/" + first
         );
         console.log(response.data);
         setValues(response.data);
@@ -168,7 +168,7 @@ export default function Products(...props) {
     const fetchProducts = async () => {
       try {
         const response = await axios
-          .get("http://localhost:8080/api/v1/products")
+          .get("https://inventoryspring.herokuapp.com/api/v1/products")
           .then((response) => {
             setProducts(response.data);
           });

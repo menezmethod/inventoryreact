@@ -116,7 +116,7 @@ export default function Parts(...props) {
 
   const handleDeletePart = (clickedPart) => {
     console.log("Deleting: " + selectionModelParts);
-    axios.delete("http://localhost:8080/api/v1/parts/" + first);
+    axios.delete("https://inventoryspring.herokuapp.com/api/v1/parts/" + first);
     //setParts((r) => r.filter((x) => !selectedIDs.has(x.id)));
   };
 
@@ -131,7 +131,7 @@ export default function Parts(...props) {
     const fetchValues = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/parts/" + first
+          "https://inventoryspring.herokuapp.com/api/v1/parts/" + first
         );
         console.log(response.data);
         setValues(response.data);
@@ -175,7 +175,7 @@ export default function Parts(...props) {
     const fetchParts = async () => {
       try {
         const response = await axios
-          .get("http://localhost:8080/api/v1/parts")
+          .get("https://inventoryspring.herokuapp.com/api/v1/parts")
           .then((response) => {
             setParts(response.data);
           });
