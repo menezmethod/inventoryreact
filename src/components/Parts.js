@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { DataGrid, GridApiContext, GridToolbar } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { Grid } from "@mui/material";
@@ -120,12 +120,12 @@ export default function Parts(...props) {
     //setParts((r) => r.filter((x) => !selectedIDs.has(x.id)));
   };
 
-  const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  }));
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: "center",
+  //   color: theme.palette.text.secondary,
+  // }));
 
   const handleModify = () => {
     const fetchValues = async () => {

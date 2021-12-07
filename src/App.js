@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
@@ -8,11 +7,6 @@ import Products from "./components/Products";
 import Box from "@mui/material/Box";
 
 const App = () => {
-  const [title, setTitle] = useState("Inventory Management System");
-
-  useEffect(() => {
-    document.title = title;
-  }, []);
 
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
